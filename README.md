@@ -1,7 +1,7 @@
-Yoo welcome to my swag profile
+Yo I'm Phlox
 
-I uh do shits
+I code shit
 
-I mainly mess with Unity and port games to consoles (Switch, PSVita, and 3DS).
+Discord: yophlox
 
-Anyways feel free to check out my shii and that's all!
+That's all.
