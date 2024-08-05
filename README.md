@@ -1,7 +1,3 @@
-Yo I'm Phlox
+i love game & software development
 
-I code shit
-
-Discord: yophlox
-
-That's all.
+discord: phloxyo or yophlox
