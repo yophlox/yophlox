@@ -2,7 +2,7 @@
 
 i love game & software development
 
-discord: phloxyo or yophlox
+discord: phloxyo
 
 Current Projects:
 
