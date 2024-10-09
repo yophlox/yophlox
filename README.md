@@ -8,7 +8,7 @@ Current Projects:
 
 SlipKnot - A w.i.p. swag platformer made by me and a few friends :D
 
-SRU18 - A port of a merged Sonic Runners decompilation to Unity 2018
+Moon4K - A 4K Rhythm Game developed by me.
 
 FLIP-MIX - A cool ass fnf mod!!!
 
