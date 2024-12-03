@@ -1,3 +1,16 @@
+# Site Creds
+
+YoPhlox (me!) - everything
+
+# Fukkireta Creds 
+
+Vocals: ろん (Ron/Lon)
+Lyrics: gojimaji-P(=Lamaze-P)
+EYEGASMATICAL KAROKE: tripflag
+"Translation": tripflag
+
+# PROFILE README!
+
 15
 
 i love game & software development
