@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    content: message
+                    content: `<@991532578643390564> New message: ${message}`
                 })
             });
 
