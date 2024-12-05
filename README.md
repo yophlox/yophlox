@@ -4,10 +4,10 @@ YoPhlox (me!) - everything
 
 # Fukkireta Creds 
 
-Vocals: ろん (Ron/Lon)
-Lyrics: gojimaji-P(=Lamaze-P)
-EYEGASMATICAL KAROKE: tripflag
-"Translation": tripflag
+* Vocals: ろん (Ron/Lon)
+* Lyrics: gojimaji-P(=Lamaze-P)
+* EYEGASMATICAL KAROKE: tripflag
+* "Translation": tripflag
 
 # PROFILE README!
 
