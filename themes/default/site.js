@@ -1,3 +1,8 @@
+const currentTheme = localStorage.getItem('selectedTheme') || 'default';
+if (!window.location.pathname.includes(`/themes/${currentTheme}/`)) {
+    window.location.href = '/';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.querySelector('.bg-video');
     const muteButton = document.getElementById('muteButton');
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    content: `<@991532578643390564> New message: ${message}`
+                    content: `<@&1220820325915299971> New message: ${message}`
                 })
             });
 

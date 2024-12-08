@@ -1,0 +1,139 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ff9900;
+    background-image: url('../../data/flame-tile.gif');
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 3px solid #ff6600;
+    border-radius: 0;
+    box-shadow: 0 0 10px #ff6600;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-bottom: 2px solid #ff6600;
+}
+
+.profile-pic {
+    border: 3px solid #ff6600;
+    border-radius: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #ff9900;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
+    padding: 5px 10px;
+    background-color: #330000;
+    border: 2px solid #ff6600;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #ff6600;
+}
+
+.content-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #ff6600;
+}
+
+.bg-video {
+    display: none; 
+}
+
+.mute-button {
+    display: none; 
+}
+
+.hit-counter {
+    text-align: center;
+    margin: 20px 0;
+    font-family: "Courier New", monospace;
+    color: #00ff00;
+}
+
+.construction {
+    text-align: center;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 2px solid #ff6600;
+}
+
+.social-media a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-media a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+footer img {
+    height: 31px; 
+    width: auto;
+    margin: 0 5px;
+} 
+
+.retro-form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.retro-form textarea {
+    width: 90%;
+    background-color: #000000;
+    color: #ff9900;
+    border: 2px solid #ff6600;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.retro-form button {
+    background-color: #330000;
+    color: #ff9900;
+    border: 2px solid #ff6600;
+    padding: 10px 20px;
+    font-family: 'Comic Sans MS', cursive;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.retro-form button:hover {
+    background-color: #ff6600;
+    color: #ffffff;
+}

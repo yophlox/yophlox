@@ -3,52 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yophlox</title>
-    <link rel="icon" type="image/png" href="data/favicon.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Select Theme - @yophlox</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .theme-selector {
+            background: rgba(22, 22, 22, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        select {
+            background: #2a2a2a;
+            color: #ffffff;
+            padding: 8px;
+            border: 1px solid #404040;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        button {
+            background: #404040;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #505050;
+        }
+    </style>
 </head>
 <body>
-    <button id="muteButton" class="mute-button">
-        <img src="data/mute.png" alt="Mute/Unmute">
-    </button>
-    <video autoplay loop playsinline class="bg-video">
-        <source src="data/fukkireta.mp4" type="video/mp4">
-    </video>
-    <div class="container">
-        <header>
-            <img src="data/pfp.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>yophlox</h1>
-            <nav>
-                <ul>
-                    <li><a href="work.html">previous work</a></li>
-                    <li><a href="commissions.html">commission details</a></li>
-                    <li><a href="#contact">haii :3</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <div class="content-card">
-            <p>Silly 15 year old coder guy :3</p>
-        </div>
-
-        <div class="content-card" id="contact">
-            <form id="contact-form">
-                <label for="message">Send Phlox a message!</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send message</button>
-            </form>
-        </div>
-
-        <footer>
-            <div class="social-media">
-                <a href="https://twitter.com/yophlox">twitter</a>
-                <a href="https://github.com/yophlox">github</a>
-                <a href="https://discord.com/users/991532578643390564">@phloxyo on discord</a>
-            </div>
-            <p>© 2024-2025 yophlox</p>
-        </footer>
+    <div class="theme-selector">
+        <h1>Select Theme</h1>
+        <select id="themeSelect">
+            <option value="default">Default Theme</option>
+            <option value="2000s">2000s Theme</option>
+        </select>
+        <br>
+        <button onclick="selectTheme()">Enter Site</button>
     </div>
-    <script src="site.js"></script>
+    <script>
+        function selectTheme() {
+            const theme = document.getElementById('themeSelect').value;
+            localStorage.setItem('selectedTheme', theme);
+            window.location.href = `themes/${theme}/index.html`;
+        }
+    </script>
 </body>
 </html>
