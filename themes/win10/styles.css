@@ -1,0 +1,584 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('data/win10-bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.desktop {
+    height: calc(100vh - 40px);
+    position: relative;
+}
+
+.desktop-icons {
+    padding: 20px;
+}
+
+.icon {
+    width: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.icon span {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.window {
+    position: absolute;
+    background: #202020;
+    border: 1px solid #323232;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    min-width: 400px;
+    min-height: 300px;
+    resize: both;
+    overflow: hidden;
+    transition: width 0.2s ease-out, 
+                height 0.2s ease-out,
+                top 0.2s ease-out,
+                left 0.2s ease-out,
+                transform 0.2s ease-out;
+}
+
+.title-bar {
+    background: #2d2d2d;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #323232;
+    color: #ffffff;
+}
+
+.window-controls {
+    display: flex;
+    gap: 1px;
+}
+
+.window-controls button {
+    border: none;
+    background: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 45px;
+    transition: background-color 0.2s;
+}
+
+.window-controls button:hover {
+    background: #404040;
+}
+
+.window-controls .minimize:hover {
+    background: #404040;
+}
+
+.window-controls .maximize:hover {
+    background: #404040;
+}
+
+.window-controls .close:hover {
+    background: #c42b1c;
+}
+
+.window-content {
+    padding: 20px;
+    color: #ffffff;
+    height: calc(100% - 37px);
+    overflow-y: auto;
+}
+
+.window-content a {
+    color: #4cc2ff;
+    text-decoration: none;
+}
+
+.window-content a:hover {
+    text-decoration: underline;
+}
+
+.taskbar {
+    height: 40px;
+    background: rgba(32, 32, 32, 0.95);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+.start-button {
+    width: 48px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.start-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.task-buttons {
+    flex: 1;
+    display: flex;
+    gap: 4px;
+    padding: 0 8px;
+    overflow-x: auto;
+}
+
+.task-button {
+    height: 32px;
+    padding: 0 12px;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 160px;
+    transition: background-color 0.2s,
+                border-bottom-color 0.2s,
+                transform 0.1s;
+}
+
+.task-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.task-button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.task-button:active {
+    transform: scale(0.95);
+}
+
+.task-button.active {
+    background: rgba(255,255,255,0.2);
+    border-bottom: 2px solid #0078d4;
+    animation: taskButtonActivate 0.2s ease-out;
+}
+
+@keyframes taskButtonActivate {
+    0% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.system-tray {
+    color: white;
+    padding: 0 16px;
+    font-size: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #323232;
+    border-radius: 4px;
+    background: #2d2d2d;
+    color: #ffffff;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid #4cc2ff;
+    border-color: transparent;
+}
+
+button {
+    padding: 8px 16px;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a8ad4;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #323232;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.resize-handle {
+    position: absolute;
+    background: transparent;
+}
+
+.resize-handle.n {
+    top: -3px;
+    left: 3px;
+    right: 3px;
+    height: 6px;
+    cursor: n-resize;
+}
+
+.resize-handle.e {
+    top: 3px;
+    right: -3px;
+    bottom: 3px;
+    width: 6px;
+    cursor: e-resize;
+}
+
+.resize-handle.s {
+    bottom: -3px;
+    left: 3px;
+    right: 3px;
+    height: 6px;
+    cursor: s-resize;
+}
+
+.resize-handle.w {
+    top: 3px;
+    left: -3px;
+    bottom: 3px;
+    width: 6px;
+    cursor: w-resize;
+}
+
+.resize-handle.ne {
+    top: -3px;
+    right: -3px;
+    width: 6px;
+    height: 6px;
+    cursor: ne-resize;
+}
+
+.resize-handle.se {
+    bottom: -3px;
+    right: -3px;
+    width: 6px;
+    height: 6px;
+    cursor: se-resize;
+}
+
+.resize-handle.sw {
+    bottom: -3px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    cursor: sw-resize;
+}
+
+.resize-handle.nw {
+    top: -3px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    cursor: nw-resize;
+}
+
+.window-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.window-content::-webkit-scrollbar-track {
+    background: #202020;
+}
+
+.window-content::-webkit-scrollbar-thumb {
+    background: #404040;
+    border-radius: 5px;
+}
+
+.window-content::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+}
+
+.task-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes windowOpen {
+    from {
+        transform: translate(-50%, -50%) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes windowMinimize {
+    to {
+        transform: translate(0, 100vh) scale(0.7);
+        opacity: 0;
+    }
+}
+
+@keyframes windowRestore {
+    from {
+        transform: translate(0, 100vh) scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+.window.opening {
+    animation: windowOpen 0.2s ease-out;
+}
+
+.window.minimizing {
+    animation: windowMinimize 0.2s ease-out;
+}
+
+.window.restoring {
+    animation: windowRestore 0.2s ease-out;
+}
+
+.pinned-apps {
+    display: flex;
+    gap: 2px;
+    padding: 0 4px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 4px;
+}
+
+.app-button {
+    height: 40px;
+    width: 44px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.app-button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.app-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 2px;
+    background: rgba(255,255,255,0.7);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.app-button:hover::after {
+    opacity: 1;
+}
+
+.app-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.start-menu {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    width: 350px;
+    height: 600px;
+    background: rgba(32, 32, 32, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10000;
+    display: flex;
+    animation: startMenuOpen 0.2s ease-out;
+    transform-origin: bottom left;
+}
+
+@keyframes startMenuOpen {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes startMenuClose {
+    to {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+}
+
+.start-menu-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.start-menu-top {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-button, .power-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.user-button:hover, .power-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.user-button img, .power-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.start-menu-apps {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.app-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+}
+
+.app-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.app-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.start-menu-apps::-webkit-scrollbar {
+    width: 4px;
+}
+
+.start-menu-apps::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.start-menu-apps::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+@keyframes windowsShutdown {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(0.95);
+        filter: brightness(0.5);
+    }
+    100% {
+        transform: scale(0.9);
+        filter: brightness(0);
+    }
+}
+
+.power-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.power-button:hover {
+    background: #b1afaf; 
+}
+ 

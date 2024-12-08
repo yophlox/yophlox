@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoPhlox (C:)</title>
+    <link rel="icon" type="image/png" href="data/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="desktop">
+        <div class="desktop-icons">
+            <div class="icon" ondblclick="openWindow('work')">
+                <img src="data/folder.png" alt="Work">
+                <span>Work</span>
+            </div>
+            <div class="icon" ondblclick="openWindow('commissions')">
+                <img src="data/folder.png" alt="Commissions">
+                <span>Commissions</span>
+            </div>
+            <div class="icon" ondblclick="openWindow('contact')">
+                <img src="data/mail.png" alt="Contact">
+                <span>Contact Me</span>
+            </div>
+        </div>
+
+        <div class="start-menu" style="display: none;">
+            <div class="start-menu-left">
+                <div class="start-menu-top">
+                    <button class="user-button">
+                        <img src="data/user.png" alt="User">
+                        <span>User</span>
+                    </button>
+                    <button class="power-button">
+                        <img src="data/power.png" alt="Power">
+                    </button>
+                </div>
+                <div class="start-menu-apps">
+                    <div class="app-list">
+                        <div class="app-item">
+                            <img src="data/vscode-icon.png" alt="VS Code">
+                            <span>Visual Studio Code</span>
+                        </div>
+                        <div class="app-item">
+                            <img src="data/github-icon.png" alt="GitHub">
+                            <span>GitHub Desktop</span>
+                        </div>
+                        <div class="app-item">
+                            <img src="data/terminal-icon.png" alt="Terminal">
+                            <span>Terminal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="workWindow" class="window" style="display: none;">
+            <div class="title-bar">
+                <span>Work</span>
+                <div class="window-controls">
+                    <button class="minimize">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close" onclick="closeWindow('work')">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h3>Other Projects</h3>
+                <ul>
+                    <li><a href="https://yophlox.itch.io/moon4k">Moon4K - A rhythm game built from the ground up inspired by other 4k rhythm games</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=j9t7-uvt0K0&t">Pizza Tower Lapping System in Baldi's Basics</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=Yzid6hnbnC8">Doki Doki The Normal VN 2.0 Android Port</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=eP3lY-Y4FLc">Utopia Sonic in Baldi's Basics</a></li>
+                    <li><a href="https://x.com/yophlox/status/1862885119998005399">Sonic Battle inspired dialogue system</a></li>
+                </ul>
+    
+                <h3>Unity Decomps & Ports</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=TJ__jrESblQ">Sonic Runners Unity 2019 Port</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=QU5Z8fn7ZB8&t">BATIM Downward Fall PSVita</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=ToVkXBeABZo&t">Temple Run PSVita</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=-Oifi7CHFhk">Sonic Utopia PSVita</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=tEYnfrtdFBA&t">BATIM Downward Fall iOS</a></li>
+                </ul>
+    
+                <h3>FNF Mods</h3>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=rVk_c2eCD2M&t=113s">NMI Remake - All the code</a></li>
+                    <li><a href="https://gamebanana.com/mods/536357">FLIP-MIX Demo - Coding assistance, saved the build and made the results screen base</a></li>
+                    <li><a href="https://gamebanana.com/mods/527404">Week-Day Rappin' - Main Menu and Got psych charts working in base game (0.2.7.1)</a></li>
+                    <li><a href="https://gamebanana.com/mods/397845">Mega CD Locked On - Unused/Cancelled Mobile Port</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="commissionsWindow" class="window" style="display: none;">
+            <div class="title-bar">
+                <span>Commissions</span>
+                <div class="window-controls">
+                    <button class="minimize">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close" onclick="closeWindow('commissions')">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <h3>Commission Information</h3>
+                <div class="content-card">
+                    <h2>Unity Decomp Services</h2>
+                    <ul>
+                        <li>Mobile Game Decomp - $5</li>
+                        <li>PC Game Decomp - $10</li>
+                        <li>Mobile Game Decomp + Port - $15</li>
+                        <li>PC Game Decomp + Port - $20</li>
+                    </ul>
+                </div>
+        
+                <div class="content-card">
+                    <h2>FNF Mod Coding (HAXE/SOURCE ONLY)</h2>
+                    <ul>
+                        <li>Code Fix/Clean-up - $2</li>
+                        <li>Custom Menus - $5</li>
+                        <li>Custom Mechanics - Variable pricing (up to $15)</li>
+                    </ul>
+                </div>
+        
+                <div class="content-card">
+                    <h2>General Coding (Haxe, C# and Ren'py)</h2>
+                    <ul>
+                        <li>Bug Fixes - $3</li>
+                        <li>DDLC Mod Mobile Porting - $5</li>
+                        <li>Full Game Development - Contact for pricing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="contactWindow" class="window" style="display: none;">
+            <div class="title-bar">
+                <span>Contact</span>
+                <div class="window-controls">
+                    <button class="minimize">─</button>
+                    <button class="maximize">□</button>
+                    <button class="close" onclick="closeWindow('contact')">×</button>
+                </div>
+            </div>
+            <div class="window-content">
+                <form id="contact-form">
+                    <textarea 
+                        id="message" 
+                        rows="4" 
+                        placeholder="Type your message here..."
+                        required
+                    ></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <button class="start-button">
+            <img src="data/win-logo.png" alt="Start">
+        </button>
+        <div class="pinned-apps">
+            <button class="app-button" title="File Explorer">
+                <img src="data/folder-icon.png" alt="File Explorer">
+            </button>
+            <button class="app-button" title="Microsoft Edge">
+                <img src="data/brave-icon.png" alt="Edge">
+            </button>
+            <button class="app-button" title="Visual Studio Code">
+                <img src="data/vscode-icon.png" alt="VS Code">
+            </button>
+            <button class="app-button" title="GitHub Desktop">
+                <img src="data/github-icon.png" alt="GitHub">
+            </button>
+            <button class="app-button" title="Terminal">
+                <img src="data/terminal-icon.png" alt="Terminal">
+            </button>
+        </div>
+        <div class="task-buttons">
+        </div>
+        <div class="system-tray">
+            <span class="time"></span>
+        </div>
+    </div>
+    <script src="site.js"></script>
+</body>
+</html>
