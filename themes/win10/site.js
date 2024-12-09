@@ -344,4 +344,37 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = '../../index.html';
         }, 500);
     });
+
+    const icons = document.querySelectorAll('.icon');
+    icons.forEach(icon => {
+        let lastTap = 0;
+        
+        icon.addEventListener('click', function(e) {
+            if (!isMobile) {
+                return;
+            }
+            
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            
+            if (tapLength < 500 && tapLength > 0) {
+                const windowId = this.getAttribute('data-window');
+                if (windowId) {
+                    openWindow(windowId);
+                }
+                e.preventDefault();
+            }
+            
+            lastTap = currentTime;
+        });
+
+        icon.addEventListener('dblclick', function() {
+            if (!isMobile) {
+                const windowId = this.getAttribute('data-window');
+                if (windowId) {
+                    openWindow(windowId);
+                }
+            }
+        });
+    });
 });
