@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const message = document.getElementById('message').value;
         
         const bannedWords = [
-            'nigger', 'nigga', 'racist', 'slur', 'hate', 'colored people' // truly the filter ever :D
+            'nigger', 'nigga', 'racist', 'slur', 'hate', 'colored people', 'fag', 'faggot', 'retard' // truly the filter ever :D, also i'm not racist nor homophobic or anything else, I fw everyone and every race, gender, sexuality, etc.
         ];
         
         const containsBannedWord = bannedWords.some(word => 
