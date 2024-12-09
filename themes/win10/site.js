@@ -263,6 +263,19 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const message = document.getElementById('message').value;
             
+            const bannedWords = [
+                'nigger', 'nigga', 'racist', 'slur', 'hate', 'colored people' // truly the filter ever :D
+            ];
+            
+            const containsBannedWord = bannedWords.some(word => 
+                message.toLowerCase().includes(word.toLowerCase())
+            );
+            
+            if (containsBannedWord) {
+                alert('Message contains inappropriate content and cannot be sent.');
+                return;
+            }
+            
             const p1 = 'discord.com/api';
             const p2 = '/webhooks/';
             const p3 = '1313279684791767111';

@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const message = document.getElementById('message').value;
             
+            const bannedWords = [
+                'nigger', 'nigga', 'racist', 'slur', 'hate', 'colored people' // truly the filter ever :D
+            ];
+            
+            const containsBannedWord = bannedWords.some(word => 
+                message.toLowerCase().includes(word.toLowerCase())
+            );
+            
+            if (containsBannedWord) {
+                showRetroAlert('Message contains inappropriate content and cannot be sent.');
+                return;
+            }
+            
             const clickSound = new Audio('data/click.mp3');
             clickSound.play().catch(() => {});
             
