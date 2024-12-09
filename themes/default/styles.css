@@ -197,3 +197,41 @@ social-media a:hover {
 #contact-form button:hover {
     background: #505050;
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content-card {
+        padding: 15px;
+    }
+
+    #contact-form textarea {
+        width: 100%;
+    }
+
+    .mute-button {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.mobile .bg-video {
+    display: none;
+}
+
+.mobile body {
+    background: #0a0a0a;
+}
