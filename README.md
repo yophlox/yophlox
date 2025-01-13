@@ -27,10 +27,10 @@ Current Projects:
 
 [Moon4K - A 4K Rhythm Game](https://yophlox.itch.io/moon4k)
 
-Vs Ty - Self Insert fnf mod moment
+SlipKnot - A w.i.p. swag platformer made by me
 
 Projects on Hold:
 
-SlipKnot - A w.i.p. swag platformer made by me and a few friends :D
+Vs Ty - Self Insert fnf mod moment
 
-Everything else thats on here I think, idk.
+Everything else thats on here (my github) I think, idk.
