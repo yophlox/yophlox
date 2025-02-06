@@ -17,8 +17,6 @@ i love game & software development
 
 most of my other repos are [here](https://github.com/PhloxShii)
 
-discord: phloxyo
-
 stuff i use: assetripper, visual studio, visual studio code, cursor, haxe, flash develop, unity, github desktop, godot, game maker, utmt (undertale modding tool), and obs lol
 
 main stuff I know/sorta know: haxe, actionscript3, haxeflixel, unity, c#, c, c++, gml, gdscript, and javascript
